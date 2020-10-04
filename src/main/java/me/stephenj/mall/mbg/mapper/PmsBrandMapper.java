@@ -6,7 +6,7 @@ import me.stephenj.mall.mbg.model.PmsBrandExample;
 import org.apache.ibatis.annotations.Param;
 
 public interface PmsBrandMapper {
-    int countByExample(PmsBrandExample example);
+    long countByExample(PmsBrandExample example);
 
     int deleteByExample(PmsBrandExample example);
 
