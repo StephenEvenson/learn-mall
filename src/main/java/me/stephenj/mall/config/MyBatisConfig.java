@@ -7,6 +7,6 @@ import org.springframework.context.annotation.Configuration;
  * Created by macro on 2020/10/3.
  */
 @Configuration
-@MapperScan("me.stephenj.mall.mbg.mapper")
+@MapperScan({"me.stephenj.mall.mbg.mapper","me.stephenj.mall.dao"})
 public class MyBatisConfig {
 }
