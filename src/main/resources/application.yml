@@ -43,6 +43,14 @@ spring:
       host: 192.168.1.19 # mongodb的连接地址
       port: 27017 # mongodb的连接端口号
       database: mall-port # mongodb的连接的数据库
+  rabbitmq:
+    host: 192.168.1.19 # rabbitmq的连接地址
+    port: 5672 # rabbitmq的连接端口号
+    virtual-host: /mall # rabbitmq的虚拟host
+    username: mall # rabbitmq的用户名
+    password: 813929RM # rabbitmq的密码
+    publisher-confirm-type: correlated
+    publisher-returns: true
 
 mybatis:
   mapper-locations:
@@ -79,4 +87,7 @@ management:
     mongo:
       enabled: false
 
+# 自定义订单延时时间
+order:
+  delayTimes: 3000
 
