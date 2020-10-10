@@ -51,6 +51,11 @@ spring:
     password: 813929RM # rabbitmq的密码
     publisher-confirm-type: correlated
     publisher-returns: true
+  # 开启文件上传
+  servlet:
+    multipart:
+      enabled: true #开启文件上传
+      max-file-size: 10MB #限制文件上传大小为10M
 
 mybatis:
   mapper-locations:
@@ -90,4 +95,11 @@ management:
 # 自定义订单延时时间
 order:
   delayTimes: 3000
+
+# MinIO对象存储相关配置
+minio:
+  endpoint: http://192.168.1.83:9000 #MinIO服务所在地址
+  bucketName: mall #存储桶名称
+  accessKey: minio #访问的key
+  secretKey: 813929MI #访问的秘钥
 
